@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="pagination/paging.css" />
+    <title>分页插件</title>
+    <style>
+      h1,h2{
+        text-align: center;
+        width: 100%
+      }
+      span{
+        font-size:14px;
+        color:"#ccc" 
+      }
+      .box{
+        overflow: hidden;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body style="background: #fff">
+    <h1>多个分页插件同时显示<br />
+        <span>对齐方式可以采用float的方式，默认居中，right右对齐，left左对齐</span>
+    </h1>
+    <h2>第一个分页</h2>
+    <div class="box"><!-- demo装饰用的div标签 -->
+    <div style="float:left" class="pagger-box pagger" id="box"></div>
+  </div>
+    <h2>第二个分页</h2>
+    <div class="box"><!-- demo装饰用的div标签 -->
+    <div class="pagger-box pagger" id="box1"></div>
+  </div>
+    <h2>第三个分页</h2>
+    <div class="box"><!-- demo装饰用的div标签 -->
+    <div style="float:right" class="pagger-box pagger" id="box2"></div>
+    </div>
+    <script src="http://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="pagination/paging.js"></script>
+    <script>
+      var setTotalCount = 1000;//总项目数
+      //第一个分页初始化
+      $("#box").paging({
+        initPageNo: 3, // 初始页码
+        totalPages: 100, //总页数
+        totalCount: "合计" + setTotalCount + "条数据", // 条目总数
+        slideSpeed: 600, // 缓动速度。单位毫秒
+        jump: true, //是否支持跳转
+        callback: function(page) {
+          // 回调函数
+          console.log(page);
+        }
+      });
+      //第二个分页初始化
+      $("#box1").paging({
+        initPageNo: 100, // 初始页码
+        totalPages: 10, //总页数
+        totalCount: "合计" + setTotalCount + "条数据", // 条目总数
+        slideSpeed: 600, // 缓动速度。单位毫秒
+        jump: true, //是否支持跳转
+        callback: function(page) {
+          // 回调函数
+          console.log(page);
+        }
+      });
+      //第三个分页初始化
+      $("#box2").paging({
+        initPageNo: 1, // 初始页码,页码从1开始
+        totalPages: 100, //总页数
+        totalCount: "合计" + setTotalCount + "条数据", // 条目总数
+        slideSpeed: 600, // 缓动速度。单位毫秒
+        jump: false, //是否支持跳转
+        callback: function(page) {
+          // 回调函数
+          console.log(page);
+        }
+      });
+    </script>
+  </body>
+</html>

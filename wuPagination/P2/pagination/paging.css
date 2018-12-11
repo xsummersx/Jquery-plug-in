@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagger {
+  margin: 30px auto 0px auto;
+  width: 750px;
+  text-align: center;
+	font-size: 14px;
+	color: #303133;
+  display: block;
+  overflow: hidden;
+}
+.tableBox{
+	padding-bottom: 0px;
+}
+.pagger button {
+  padding: 4px 8px;
+  margin: 0 10px;
+  float: left;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #999;
+  background-color: #ffffff;
+}
+.pagger button:hover{
+  color:#2D5FAD;
+}
+.pagger .first-page,
+.pagger .last-page {
+  margin: 0;
+}
+.pagger .pageWrap {
+  height: 40px;
+  float: left;
+  overflow: hidden;
+}
+.pagger .pageWrap ul {
+  width: 999999999px;
+  height: 40px;
+  float: left;
+}
+.pagger .pageWrap ul li {
+  padding: 5px 0px;
+  margin: 0px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  float: left;
+  width: 35px;
+}
+.pagger .pageWrap ul .sel-page {
+  padding: 5px 0px;
+  background-color: #2D5FAD;
+    color: #fff;
+    width: 35px;
+}
+.pagger .jump-text {
+  width: 35px;
+  height: 27px;
+  border-radius:3px; 
+  border:1px solid #999;
+  text-align: center;
+  margin: 0 5px;
+  float: left;
+}
+.pagger .jump-button {
+  margin: 0;
+  float: left;
+}
+.pagger .total-pages,
+.pagger .total-count {
+  margin-left: 10px;
+  float: left;
+  font-size: 14px;
+  line-height: 27px;
+}
