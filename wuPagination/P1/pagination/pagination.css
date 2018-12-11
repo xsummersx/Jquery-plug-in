@@ -1,0 +1,158 @@
+﻿.digg {
+	margin: auto;
+	line-height:32px;
+	font-family:微软雅黑;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #666;
+    display: inline-block;
+}
+.digg a
+{
+	width:auto;
+	display:inline-block;
+	text-decoration: none;
+	color: #858585;
+	font-family:微软雅黑;
+	font-size:16px;
+	font-weight:400;
+	text-align:center;
+    background:url(unchecked.png) no-repeat;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    margin-left:5px;
+}
+
+.digg a:hover
+{
+    color:#02b8fb;
+}
+
+.digg a:active{
+ 	border: none;
+ 	color: #000; 
+ }
+
+.digg a:active:hover{
+ 	/*background:#FF9900;*/
+    /*border-radius: 3px;*/
+ }
+
+.digg span.current 
+{
+	display:inline-block;
+	text-align:center;
+    background:url("checked.png") no-repeat;
+    width:32px;
+    height:32px;
+    line-height:32px;
+	font-family:微软雅黑;
+	font-weight:700;
+	font-size:16px;
+    color:#FFFFFF;
+    margin-left:5px;
+}
+.digg span.disabled {	
+	display:inline-block;
+	text-align:center;
+	color: #FFF;
+    background:url(disabled.png) no-repeat;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    color:#4E7884;
+    border-radius:3px;
+    margin-left:5px;
+}
+.digg a.disabled {	
+    background:url(unchecked.png) no-repeat;
+    width:32px;
+    height:32px;
+    line-height: 32px;
+    color:#858585;
+    font-size:16px;
+}
+.digg a.disabled:hover{	
+    width:32px;
+    height:32px;
+    color:#02b8fb;
+}
+.cls_ShowIndex{
+    padding-left:4px;
+    font-family:微软雅黑;
+    font-size:16px;
+    text-align:left;
+    font-weight:400;
+    padding:0px !important;
+    text-align:center;
+    background:url(input.png) no-repeat;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    margin-left:5px;
+    border:none;
+    outline:none;
+    color:#858585;
+}
+
+.cls_ShowIndex:hover{
+    background:url(input-hover.png) no-repeat;
+    color:#02b8fb;
+}
+
+.font1{
+    margin-right:0px 5px 0px 10px;
+    font-family: "微软雅黑 Regular","微软雅黑";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #858585;
+    line-height:32px;
+}
+
+.font2{
+    margin:0px 5px;
+    font-family: "微软雅黑 Regular","微软雅黑";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #858585;
+    line-height:32px;
+}
+
+.Jump{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-family: "微软雅黑 Regular","微软雅黑";
+    font-style: normal;
+    font-size: 14px;
+    padding: 7px;
+    background: url(unchecked.png) no-repeat 2px 1px;
+    text-align: center;
+    line-height: 32px;
+    color:#858585;
+}
+
+.Jump:hover{
+    color:#02b8fb;
+}
+.JumpTo{
+    margin: auto; 
+	text-align: left; 
+	line-height:32px;
+	font-family:微软雅黑;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #666;
+    display: inline-block;
+}
+
+.ellipse_text {
+    width:15px;
+    height:31px;
+    margin-left:5px;
+}
