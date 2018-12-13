@@ -160,20 +160,19 @@ angular.module('wui.date',[]).directive('wuiDate', function() {
 		}
 		// 字符串时间格式化为标准时间
 		function StrDateToGMT(date) {
-			if(date && new Date(DateFormatForIE(date)) != 'Invalid Date') {
-				return new Date(DateFormatForIE(date));
+			if(date && new Date(date) != 'Invalid Date') {
+				return new Date(date);
 			}
 			return null;
 		}
 		
 		// 标准时间格式化为字符串时间
 		function GMTToStrDate(date) {
-			date = new Date(DateFormatForIE(date));
+			date = new Date(date);
 			
-			console.log('日期转换函数中时间为---' + date + '---时间的格式为---' + typeof date);
-			//if(date && toString.call(date) == '[object Date]') {
+			if(date && Object.prototype.toString.call(date) == '[object Date]') {
 			
-			if(true){
+			//if(true){
 				var newdate = date.getFullYear() + '/' + getDoubleDigit(date.getMonth() + 1) + '/' + getDoubleDigit(date.getDate()) + ' ' + getDoubleDigit(date.getHours()) + ':' + getDoubleDigit(date.getMinutes()) + ':' + getDoubleDigit(date.getSeconds());
 				
 				console.log('newdate---' + newdate);
@@ -328,17 +327,6 @@ angular.module('wui.date',[]).directive('wuiDate', function() {
 
 		// 点击某天关闭弹窗的规则
 		var DATE_PICK_CLOSE = (format == DATE_RULES[2]);
-
-		
-		function DateFormatForIE(date){
-			
-			console.log(date + '--时间格式为--' + typeof date);
-			
-			var temp = date.toJSON().replace('T',' ').replace('Z','').replace(/[\.-]/g,'/');
-			var count = temp.length > 19 ? 19 : temp.length;
-			temp = temp.substring(0, count);
-			return temp;
-		};
 		
 		// Pick Date
 		scope.pickDate = function(item, e) {
