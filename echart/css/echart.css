@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "mnlx"; /*定义字体名称*/
+    src: url("font/mnlx.eot"); /*兼容eot*/
+    src: url("font/mnlx.eot?#iefix") format("embedded-opentype"),
+      url("font/mnlx.woff2") format("woff2"), url("font/mnlx.woff") format("woff"),
+      /*火狐支持woff,woff2,opentype字体*/ url("font/mnlx.ttf") format("truetype"),
+      /*基于webkit内核支持truetype字体*/
+        url("font/mnlx.svg#abandoned_bitplaneregular") format("svg");
+  }
+  /* CSS Document */
+html, body, iframe, div, ul, li, form, input, select, h1, h2, h3, h4, h5, h6, a {
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+    font-size: 12px;
+    list-style: none;
+}
+body{
+    overflow-x:hidden; 
+    background: #050d19;
+}
+#canvas{
+	filter:alpha(Opacity=60); opacity: 1;
+}
+.navBox{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.navMain{
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.navItem_Box{
+    width: 49%;
+    position: relative;
+    display: flex;
+    display: -webkit-flex;/* Safari */
+    flex-flow: row wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+    align-content:flex-start;
+    min-height: 370px;
+
+    background: rgba(76, 140, 200, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.05);
+    -moz-box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.05);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    margin-bottom:1.5%;
+    margin-top:1.5%;
+}
+
+#zhu{
+    width: 100%;
+    height: 350px;
+}
+#bing{
+    width: 100%;
+    height: 350px;
+}
+#biao{
+    width: 100%;
+    height: 350px;
+}
+#zhe{
+    width: 100%;
+    height: 350px;
+}
+#spider{
+    width: 100%;
+    height: 450px;
+}

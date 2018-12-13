@@ -1,0 +1,22 @@
+{
+  "name": "jquery-plug-in",
+  "version": "1.0.0",
+  "description": "Jquery插件，包括时间插件，分页插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xsummersx/Jquery-plug-in.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xsummersx/Jquery-plug-in/issues"
+  },
+  "homepage": "https://github.com/xsummersx/Jquery-plug-in#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

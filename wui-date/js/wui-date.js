@@ -89,7 +89,7 @@ angular.module('wui.date',[]).directive('wuiDate', function() {
 		function GMTDateInit(date) {
 			date = dateFormat(date);
 			if(date) {
-				if(!SPECIAL_DATE_RULES.includes(date)) {
+				if(!SPECIAL_DATE_RULES.indexOf(date) == -1) {
 					GMTDate = StrDateToGMT(date);
 				} else {
 					GMTDate = new Date();
@@ -131,7 +131,7 @@ angular.module('wui.date',[]).directive('wuiDate', function() {
 			if(!date) {
 				return null;
 			}
-			if(SPECIAL_DATE_RULES.includes(date)) { // 特殊字符串
+			if(SPECIAL_DATE_RULES.indexOf(date) > -1) { // 特殊字符串
 				return date;
 			}
 			date = date.toString().replace(/[\D]/g, ""); // 清除时间除数字外字符
@@ -160,19 +160,30 @@ angular.module('wui.date',[]).directive('wuiDate', function() {
 		}
 		// 字符串时间格式化为标准时间
 		function StrDateToGMT(date) {
-			if(date && new Date(date) != 'Invalid Date') {
-				return new Date(date);
+			if(date && new Date(DateFormatForIE(date)) != 'Invalid Date') {
+				return new Date(DateFormatForIE(date));
 			}
 			return null;
 		}
+		
 		// 标准时间格式化为字符串时间
 		function GMTToStrDate(date) {
-			date = new Date(date);
-			if(date && toString.call(date) == '[object Date]') {
-				return date.getFullYear() + '/' + getDoubleDigit(date.getMonth() + 1) + '/' + getDoubleDigit(date.getDate()) + ' ' + getDoubleDigit(date.getHours()) + ':' + getDoubleDigit(date.getMinutes()) + ':' + getDoubleDigit(date.getSeconds());
+			date = new Date(DateFormatForIE(date));
+			
+			console.log('日期转换函数中时间为---' + date + '---时间的格式为---' + typeof date);
+			//if(date && toString.call(date) == '[object Date]') {
+			
+			if(true){
+				var newdate = date.getFullYear() + '/' + getDoubleDigit(date.getMonth() + 1) + '/' + getDoubleDigit(date.getDate()) + ' ' + getDoubleDigit(date.getHours()) + ':' + getDoubleDigit(date.getMinutes()) + ':' + getDoubleDigit(date.getSeconds());
+				
+				console.log('newdate---' + newdate);
+				
+				return newdate;
 			}
+
 			return null;
 		}
+		
 		// 生成两位月、日
 		function getDoubleDigit(num) {
 			num = '0' + num;
@@ -318,6 +329,17 @@ angular.module('wui.date',[]).directive('wuiDate', function() {
 		// 点击某天关闭弹窗的规则
 		var DATE_PICK_CLOSE = (format == DATE_RULES[2]);
 
+		
+		function DateFormatForIE(date){
+			
+			console.log(date + '--时间格式为--' + typeof date);
+			
+			var temp = date.toJSON().replace('T',' ').replace('Z','').replace(/[\.-]/g,'/');
+			var count = temp.length > 19 ? 19 : temp.length;
+			temp = temp.substring(0, count);
+			return temp;
+		};
+		
 		// Pick Date
 		scope.pickDate = function(item, e) {
 			if(item.type == 2) {
