@@ -1,0 +1,60 @@
+/********************/
+/******Confirm*******/
+/******Confirm*******/
+/******Confirm*******/
+/********************/
+.znbkConfirm {
+    min-width: auto !important;
+    width: 320px !important;
+    height: 160px !important;
+    border-radius:0px; 
+    border-top: 3px solid #ff6600;
+    text-align: center;
+}
+.znbkConfirm .layui-layer-title{
+    visibility: hidden;
+    margin-bottom: 12px;
+}
+.znbkConfirm .layui-layer-padding{
+    display: inline;
+}
+.znbkConfirm .layui-layer-btn{
+    margin-top: 24px;
+    text-align: center;
+}
+.znbkConfirm .layui-layer-btn .layui-layer-btn0{
+    width: 88px;
+    height: 34px;
+    padding: 0px;
+    line-height: 34px;
+    border-color: #ff7700;
+     background-color: #ff7700;
+}
+.znbkConfirm .layui-layer-btn .layui-layer-btn1{
+    width: 88px;
+    height: 34px;
+    padding: 0px;
+    line-height: 34px;
+    border-color: #859dbe;
+     background-color: #859dbe;
+     color: #fff;
+}
+.znbkConfirm .layui-layer-content{
+    font-size: 16px;
+    color:#333333;
+}
+/********************/
+/*MsgMsgMsgMsgMsgMsg*/
+/*MsgMsgMsgMsgMsgMsg*/
+/*MsgMsgMsgMsgMsgMsg*/
+/********************/
+.znbkMsg{
+    min-width: auto !important;
+}
+.znbkMsg.layui-layer-border{
+    border-top: 3px solid #ff6600;
+}
+.znbkMsg .layui-layer-content{
+    font-size: 16px;
+    color: #333333;
+}
