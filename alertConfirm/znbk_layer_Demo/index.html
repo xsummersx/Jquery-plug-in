@@ -16,7 +16,7 @@
   </body>
   <script>
     $("#test1").on("click", function() {
-      layer.alert("时间到了，停止作答试卷", {
+      layer.alert("时间到了，你必须一定一定一定一定交卷", {
         //alert弹窗
         skin: "znbkConfirm",//alert的弹窗都需要加上类名为znbkConfirm
         icon: 8 //这里的图标为叹号
@@ -41,9 +41,10 @@
       );
     });
     $("#test3").on("click", function() {
-      layer.msg("请勿重复提交试卷", {
+      layer.msg("请勿重请勿重请勿重", {
         skin:'znbkMsg',  //msg的弹窗都需要加上类名为znbkMsg
-        icon: 8,});     //这里的图标为叹号
+        icon: 8,
+        time:200000});     //这里的图标为叹号
     });
   </script>
 </html>

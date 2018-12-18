@@ -1,0 +1,80 @@
+
+    /*-----*/
+    *{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+      }
+      .nav {
+        overflow: hidden;
+        width: 120px;
+        position: fixed;
+        right: 100px;
+        top: 100px;
+        background: #fff;
+      }
+      .nav li {
+        width: 120px;
+        height: 36px;
+        position: relative;
+      }
+      .nav li .line {
+        position: absolute;
+        left: 20px;
+        width: 1px;
+        height: 36px;
+        top: 0px;
+        background: #e4e4e4;
+        z-index: -1;
+      }
+      .nav li:last-child .line{
+        height: 32px
+      }
+      .nav .navItem {
+        display: block;
+        width: 118px;
+        height: 30px;
+        border-radius: 15px;
+        border: 1px solid rgb(229, 230, 230);
+        margin: 0px auto 4px auto;
+        color: #333333;
+        font-size: 12px;
+        font-family: "微软雅黑";
+        background: transparent;
+      }
+      .nav .navItem .icon {
+        display: block;
+        width: 5px;
+        height: 5px;
+        background: #ccc;
+        border-radius: 3px;
+        float: left;
+        margin-left: 17px;
+        margin-top: 12px;
+      }
+      .nav .navItem .fonts {
+        display: block;
+        float: left;
+        line-height: 30px;
+        margin-left: 13px;
+      }
+      .nav li.active .navItem,.nav li.active .navItem:hover {
+        border-color: rgb(255, 102, 0);
+        background: rgb(255, 102, 0);
+        color: #ffffff;
+      }
+      .nav li.active .navItem .icon,.nav li.active .navItem:hover .icon {
+        width: 16px;
+        height: 14px;
+        background: url(img/u23.png) no-repeat center center;
+        margin-left: 10px;
+        margin-top: 7px;
+      }
+      .nav li .navItem:hover {
+        border-color: rgb(255, 102, 0);
+        background: transparent;
+        color: rgb(255, 102, 0);
+      }
+      .nav li .navItem:hover .icon {
+        background: rgb(255, 102, 0);
+      }

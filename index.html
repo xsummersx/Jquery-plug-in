@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="id"></div>
+    <script>
+     (function($,win,doc){//命名插件
+         $.fn.extend({//多个方法共存的插件
+             color:function(options){//插件名称
+                 var defaults = {color:'blue',size:'30px',
+                    back:0
+                };//默认属性
+                 options = $.extend({},defaults,options);//判断是否改变了默认属性
+                 return console.log(options);//回调
+             }
+         })
+     }($,window,document))
+     $("#id").color({color:'red',back:1})
+    </script>
+</body>
+</html>
